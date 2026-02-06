@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tushar ❤️ Tahura</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg,#ff4e8a,#ff9ecb);
+}
+
+.card {
+    margin: 30px auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 520px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.15);
+}
+
+button {
+    padding: 14px 26px;
+    margin: 10px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.yes { background:#00c853; color:white; }
+.no { background:#d50000; color:white; }
+.next { background:white; color:#ff4e8a; }
+
+.hidden { display:none; }
+
+.gallery img {
+    width: 140px;
+    margin: 8px;
+    border-radius: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+<source src="https://files.catbox.moe/rlmjmd.mp3>
+</audio>
+
+<!-- PAGE 1 -->
+<div class="card" id="qBox">
+<h1>Tahura ❤️</h1>
+<h2>Will you be my Valentine?</h2>
+<p>— Tushar</p>
+
+<button class="yes" onclick="goNext()">Yes 💍</button>
+<button class="no" onclick="goNext()">No 😄</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="card hidden" id="resultBox">
+<h2>Congratulations Tahura 😍</h2>
+<h1>You are married to Tushar forever ❤️</h1>
+
+<button class="next" onclick="showPics()">Click Here My Love 💖</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="card hidden" id="galleryBox">
+<h2>Tushar ❤️ Tahura Forever</h2>
+
+<div class="gallery">
+<!-- ✅ PASTE YOUR PHOTO LINKS BELOW -->
+<img src="https://photos.app.goo.gl/Tq98act4JFjxNTYU8">
+<img src="https://photos.app.goo.gl/pbHo7ciRmN1kLCXg9">
+<img src="https://photos.app.goo.gl/vqynoR9NMPex6vdS7">
+<img src="https://photos.app.goo.gl/WuWyEjbVVFQ4skAL8">
+</div>
+
+<p>I love you forever Tahura 💕 — Tushar</p>
+</div>
+
+<script>
+function goNext(){
+ document.getElementById("qBox").classList.add("hidden");
+ document.getElementById("resultBox").classList.remove("hidden");
+}
+
+function showPics(){
+ document.getElementById("resultBox").classList.add("hidden");
+ document.getElementById("galleryBox").classList.remove("hidden");
+ document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
